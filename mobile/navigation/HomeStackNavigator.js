@@ -4,6 +4,7 @@ import{  createStackNavigator } from 'react-navigation-stack';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 import HomeScreen from '../component/Home';
+import ShoppingCartIcon from '../component/ShoppingCartIcon';
 
 const HomeStackNavigator = createStackNavigator(  
     {  
@@ -26,14 +27,7 @@ const HomeStackNavigator = createStackNavigator(
           headerTitle:<Text style={{marginLeft: 150, fontSize: 20,}}>Keakart</Text>,
               
           headerRight: ( 
-            <View style={{flexDirection: 'row',marginRight: 10}}>
-              <Icon
-                name="shopping-cart"
-                size={30}
-                onPress={()=>navigation.navigate('AddToKart')}
-                >
-              </Icon>
-            </View> 
+            <ShoppingCartIcon />
                  
           )  ,
           

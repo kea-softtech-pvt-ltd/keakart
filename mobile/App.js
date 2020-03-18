@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import Nav from './navigation/navigator';
-import { Provider } from 'react-redux';
-import configureStore from './store/configureStore';
-
-const store = configureStore()
+import { Provider } from 'react-redux'
+import store from './store/index'
 
 export default class App extends Component {
   constructor(props) {

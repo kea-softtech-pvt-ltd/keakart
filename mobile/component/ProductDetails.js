@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { View, Text,StyleSheet,TouchableHighlight,Image,Button,Dimensions} from 'react-native'; 
 import { ScrollView } from 'react-native-gesture-handler';
+import {connect} from 'react-redux'
+import AddToKart from './AddToKart';
+
 
 class ProductDetailsScreen extends Component{
   static navigationOptions = {
@@ -55,7 +58,8 @@ class ProductDetailsScreen extends Component{
           <Button
             title= 'Add To Cart'
             color= 'orange'
-            onPress={() => this.props.navigation.navigate('AddToKart')}
+            onPress={this.props.addItemToCart}
+            
           />
           <Button
             title= 'Wishlist'
@@ -63,13 +67,23 @@ class ProductDetailsScreen extends Component{
             onPress={() => this.saveData()}
           />
           </View>
+
           </ScrollView>
       </View>
+
     )
   }
 }
 
-export default ProductDetailsScreen;
+const mapDispatchToProps =(dispatch) => {
+  return{
+    addItemToCart : (Product) => dispatch ({ type:
+      'ADD_TO_CART', paylode: Product 
+    })
+  }
+}
+
+export default connect(null, mapDispatchToProps)(ProductDetailsScreen) ;
 
 const styles = StyleSheet.create({
 textstyle: {

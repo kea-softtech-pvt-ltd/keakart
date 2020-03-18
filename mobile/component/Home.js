@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import { View,ScrollView,Text,TouchableHighlight,Image,StyleSheet} from 'react-native'; 
-import { connect } from 'react-redux';
-import { changeCount } from '../action/counts';
-import { bindActionCreators } from 'redux'; 
 
 import ScrollImage from './ScrollImage';
 import OfferImage from './OfferImage';
@@ -116,18 +113,7 @@ class HomeScreen extends Component{
   }
 }
 
-const mapStateToProps = state => ({
-  count: state.count,
-  });
-  const ActionCreators = Object.assign(
-    {},
-    changeCount,  
-  );
-  const mapDispatchToProps = dispatch => ({
-    actions: bindActionCreators(ActionCreators, dispatch),
-  });
-  
-export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen)
+export default HomeScreen;
 
 const styles = StyleSheet.create({
   textstyle: {

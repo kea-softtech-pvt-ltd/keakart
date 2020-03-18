@@ -12,6 +12,8 @@ import HipProductDetailsStackNavigator from './HipProductStackNavigator';
 import MorxProductDetailsStackNavigator from './MorxProductStackNavigator';
 import HikvisionProductDetailsStackNavigator from './HikvisionProductStackNavigator';
 import WirelessProductDetailsStackNavigator from './WirelessProductStackNavigator';
+import ShoppingCartIcon from '../component/ShoppingCartIcon';
+import CartScreen from '../component/CartScreen';
 
 export default class Nav extends Component {  
    
@@ -23,6 +25,8 @@ export default class Nav extends Component {
 const AppDrawerNavigator = createDrawerNavigator({  
   Camera:  HomeStackNavigator,
   Login : LoginStackNavigator,
+  AddToKart: AddToStackNavigator,
+  CartScreen: CartScreen,
 
 });
     
@@ -38,6 +42,8 @@ const AppSwitchNavigator = createSwitchNavigator({
     MorxProductDetails: {screen : MorxProductDetailsStackNavigator},
     HikvisionProductDetails: {screen : HikvisionProductDetailsStackNavigator},
     WirelessProductDetails: {screen: WirelessProductDetailsStackNavigator},
+    ShoppingCartIcon: {screen: ShoppingCartIcon},
+    
     
 }); 
   

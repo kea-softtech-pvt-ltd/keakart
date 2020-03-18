@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {TouchableHighlight, Image,View,Text } from 'react-native';  
 import{  createStackNavigator } from 'react-navigation-stack';
 import ProductDetailsScreen from '../component/ProductDetails';
+import ShoppingCartIcon from '../component/ShoppingCartIcon';
 
 const ProductStackNavigator = createStackNavigator(  
     {  
@@ -19,7 +20,10 @@ const ProductStackNavigator = createStackNavigator(
                 />
                 </TouchableHighlight>            
             </View>      
-          )  
+          ) ,
+          headerRight: (
+            <ShoppingCartIcon />
+          ) 
         };  
       }  
     }  
