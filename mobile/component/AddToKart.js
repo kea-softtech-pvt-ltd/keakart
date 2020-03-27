@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text,StyleSheet,TouchableHighlight,Image,Button,Dimensions,TextInput} from 'react-native'; 
+import { View, Text,} from 'react-native'; 
 import Data from '../component/Data';
 
 class AddToKart extends Component{

@@ -14,6 +14,7 @@ import HikvisionProductDetailsStackNavigator from './HikvisionProductStackNaviga
 import WirelessProductDetailsStackNavigator from './WirelessProductStackNavigator';
 import ShoppingCartIcon from '../component/ShoppingCartIcon';
 import CartScreen from '../component/CartScreen';
+import WishListStackNavigator from './WishListStackNavigator';
 
 export default class Nav extends Component {  
    
@@ -43,7 +44,7 @@ const AppSwitchNavigator = createSwitchNavigator({
     HikvisionProductDetails: {screen : HikvisionProductDetailsStackNavigator},
     WirelessProductDetails: {screen: WirelessProductDetailsStackNavigator},
     ShoppingCartIcon: {screen: ShoppingCartIcon},
-    
+    WishList: {screen: WishListStackNavigator},
     
 }); 
   

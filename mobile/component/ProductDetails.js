@@ -10,21 +10,29 @@ class ProductDetailsScreen extends Component{
     title: 'ProductDetails',
   }
   constructor(props) {
-    super(props)
+    super(props);
+    this.state={
+      image: require('../assets/cctv1.png'),
+      name: 'Hikvision Cctv Camera' ,
+      cost: 2261
+    }
+    
   }
   render(){
+    const data = this.state
+
     const win = Dimensions.get('window');
     const ratio = win.width/541; 
     return(
       <View style={{flex: 1, flexDirection: 'column',padding: 20, }}>
         <ScrollView>
-        <Text style={styles.textstyle}>Hikvision Cctv Camera</Text>
+    <Text style={styles.textstyle}>{this.state.name}</Text>
         <View style={{flexDirection: 'column'}}>
         <View style={{flexDirection: 'column',justifyContent: 'space-between',padding: 10, }}>
           <TouchableHighlight>
             <Image
               style={{ height: 362 * ratio,  width: win.width}}
-              source={require('../assets/cctv1.png')}
+              source={this.state.image}
             />
           </TouchableHighlight>
         </View>
@@ -64,7 +72,9 @@ class ProductDetailsScreen extends Component{
           <Button
             title= 'Wishlist'
             color= 'orange'
-            onPress={() => this.saveData()}
+            onPress={() => this.props.navigation.navigate('WishList',data)}
+            
+            
           />
           </View>
 

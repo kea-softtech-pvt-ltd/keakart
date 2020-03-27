@@ -6,7 +6,12 @@ import OfferImage from './OfferImage';
 import ProductList from './ProductList';
 
 class HomeScreen extends Component{
-  
+  constructor(props){
+    super(props);
+    this.state={
+      amm: 2261,
+    }
+  }
  
   render(){
     return(
@@ -26,7 +31,7 @@ class HomeScreen extends Component{
           </TouchableHighlight>
             <Text style= {styles.buttomtitle}>Hikvision Cctv Camera</Text>
             <View style={{flexDirection: 'row',}}>
-              <Text style= {styles.buttomnumber}>{'\u20B9'}2,261</Text>
+              <Text style= {styles.buttomnumber}>{'\u20B9'}{this.state.amm}</Text>
               <View style={styles.horline}></View>
               <Text style= {styles.buttomnumbere}>{'\u20B9'}3,769</Text>  
             </View>
